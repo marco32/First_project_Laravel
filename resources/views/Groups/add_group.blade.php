@@ -5,7 +5,6 @@
     <ol class="breadcrumb">
     <h2>
       Add Group
-      <small>Control panel</small>
     </h2>
       <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
 
@@ -19,9 +18,9 @@
     <form action='/addGroup' method="POST" class="form-horizontal">
       {{ csrf_field() }}
       <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Name</label>
+        <label for="g_name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-6">
-          <input class="form-control" id="name" name="name" >
+          <input class="form-control" id="g_name" name="g_name" >
         </div>
       </div>
       <div class="form-group">

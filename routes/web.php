@@ -39,8 +39,8 @@ Route::post('/deletegroup/{id}','GroupController@deleteGroup');
 
 // Products belong Groups
 Route::get('/products_belong_groups','Product_belong_groupController@getProducts_belong_groups');
-Route::get('/products_belong_groups/{id}','Product_belong_groupController@getUniqueProduct_belong_group');
-Route::post('/updateProduct_belong_group/{id}','Product_belong_groupController@updateProduct_belong_group');
+Route::get('/products_belong_groups/{group_id}','Product_belong_groupController@getUniqueProduct_belong_group');
 Route::get('/add_products_belong_groups','Product_belong_groupController@addnewProduct_belong_group');
 Route::post('/addProduct_belong_group','Product_belong_groupController@addProduct_belong_group');
-Route::post('/deleteproduct_belong_group/{id}','Product_belong_groupController@deleteProduct_belong_group');
+Route::get('/updateProducts_belong_groups/{group_id}','Product_belong_groupController@updateProduct_belong_group');
+

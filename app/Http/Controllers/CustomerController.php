@@ -8,6 +8,8 @@ use App\Customer;
 */
 class CustomerController extends Controller
 {
+
+	// Function pour récuperer tous les clients de la base de donnée.
 	public function getCustomers()
 	{
 		$customers=Customer::all();
@@ -15,12 +17,16 @@ class CustomerController extends Controller
 		return view('/Customers/customers', ['customers' =>$customers] );
 
 	}
+
+	// Function pour récuperer un client via son Id.
 	public function getUniqueCustomer($id)
 	{
 		
 		$customer=Customer::where('id',$id)->get();
 		return view('/Customers/customer_detail', ['customer' =>$customer] );
 	}
+
+	// Function pour mettre à jour un client par le biais de son Id.
 	public function updateCustomer(Request $request, $id)
 	{
 		$customer=Customer::find($id);
@@ -32,10 +38,12 @@ class CustomerController extends Controller
         $customer->save();
 		return redirect('/customers');
 	}
+	// Function qui envoie la page pour ajouter un noueaveau client
 	public function addnewCustomer()
 	{
 		return view('/Customers/add_customer');
 	}
+	// function pour ajouter un nouveau client a la base de donnée.
 	public function addCustomer(Request $request)
 	{
 		$customer= new Customer;
@@ -45,6 +53,8 @@ class CustomerController extends Controller
 		$customer->save();
 		return redirect('/customers');
 	}
+
+	// Function qui permet de supprimer un client de la base de donnée via son Id.
 	public function deleteCustomer(Request $request, $id)
 	{
 				$customer=Customer::find($id);

@@ -23,10 +23,10 @@
       <tbody>                    
         @foreach ($groups as $value) 
         <tr>                        
-         <td>{{$value->name}}</td>
+         <td>{{$value->g_name}}</td>
          <td>{{$value->created_at}}</td>
          <td>{{$value->updated_at}}</td>
-         <td><a href={{'/groups/'.$value->id}}>Détails</a></td>                
+         <td><a href={{'/groups/'.$value->g_id}}>Détails</a></td>                
        </tr>
        @endforeach                     
      </tbody>

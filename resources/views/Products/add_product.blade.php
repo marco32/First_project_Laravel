@@ -3,11 +3,10 @@
 
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>
-      Add Product
-      <small>Control panel</small>
-    </h1>
     <ol class="breadcrumb">
+    <h2>
+      Add Product
+    </h2>
       <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
 
       <li><a href="/product">Table Products</a></li>

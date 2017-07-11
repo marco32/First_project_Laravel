@@ -2,10 +2,10 @@
 @include('include/header')
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>
-      Tables Products
-    </h1>
     <ol class="breadcrumb">
+    <h2>
+      Tables Products
+    </h2>
     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Tables Products</li>
     </ol>

@@ -4,31 +4,46 @@
   <section class="content-header">
     <ol class="breadcrumb">
     <h2>
-      Add Group/Produit
+      Update Group/Produit
     </h2>
       <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
 
       <li><a href="/product_belong_groups">Table Groups/Products</a></li>
-      <li class="active">Add Group/Product</li>
+      <li class="active">Update Group/Product</li>
     </ol>
   </section>
 </div>
 <div id="page-wrapper">
   <div class="container"> 
+    <div class="container">
+    <div>Contenu à modifié:</div>
+    @foreach ($product_belong_group as $value) 
+    <div>{{$value->g_name}}<div>
+    @break;
+  @endforeach
+    <ul>
+    @foreach ($product_belong_group as $value) 
+      <li>{{$value->name}}</li>
+    @endforeach
+    </ul>
+  </div>
+  <div>
+    Veuillez mettre à jour le contenu du groupe.
+  </div>      
     <form action='/addProduct_belong_group' method="post" class="form-horizontal">
       {{ csrf_field() }}
+     
 <div class="row">
   <div class="col-sm-4">
-  <h4>Group</h4>
-  <select name="group_id">
-    <option selected>Choix</option>
-    @foreach ($groups as $value)     
-    <option value={{$value->g_id}}>{{$value->g_name}}</option>
-    @endforeach
-  </select>
-  </div>
-  <div class="col-sm-4">
-    <h4>Product</h4>
+  @foreach ($product_belong_group as $value) 
+  <h4>Nom: {{$value->g_name}}</h4>
+    <input style="display: none;" type="text" name="group_id" value={{$value->group_id}}>
+    @break;
+  @endforeach
+    </div>
+    </div>
+  <div>
+    <h4>New Product: </h4>
   <ul>
     @foreach ($products as $value) 
     <li>
@@ -38,11 +53,13 @@
     @endforeach
   </ul>
   </div>
-</div>
+
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Valider</button>
+          <button type="submit" class="btn btn-success">Valider</button>
         </div>
       </div>
+      </fieldset>
     </form>        
+<a href="/product_belong_groups" role="button" class="btn btn-info">Table Groups/Products</a>

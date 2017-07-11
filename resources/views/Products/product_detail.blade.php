@@ -5,7 +5,6 @@
     <ol class="breadcrumb">
     <h2>
       Product Détail
-      <small>Control panel</small>
     </h2>
       <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
       <li><a href="/product">Table Products</a></li>      

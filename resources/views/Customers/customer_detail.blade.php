@@ -4,8 +4,7 @@
   <section class="content-header">
     <ol class="breadcrumb">
     <h2>
-      Dashboard
-      <small>Control panel</small>
+      Détail Customer
     </h2>
       <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
       <li><a href="/customer">Table Customer</a></li>      

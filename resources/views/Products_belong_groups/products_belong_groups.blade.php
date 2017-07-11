@@ -2,10 +2,10 @@
 @include('include/header')
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>
-      Tables Groups/Products
-    </h1>
     <ol class="breadcrumb">
+    <h2>
+      Tables Groups/Products
+    </h2>
     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Tables Groups/Products</li>
     </ol>
@@ -14,17 +14,15 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Group_id</th>
-          <th>Product_id</th>
+          <th>Nom</th>
           <th>Détail</th>
         </tr>
       </thead>
       <tbody>                    
-        @foreach ($products_belong_groups as $value) 
+        @foreach ($productsgroups as $value) 
         <tr>                        
-         <td>{{$value->group_id}}</td>
-         <td>{{$value->produit_id}}</td>
-         <td><a href={{'/products_belong_groups/'.$value->id}}>Détails</a></td>                
+         <td>{{$value->g_name}}</td>
+         <td><a href={{'/products_belong_groups/'.$value->g_id}} role="button" class="btn btn-info">Détail du Groupe de Produit</a>
        </tr>
        @endforeach                     
      </tbody>
@@ -32,5 +30,5 @@
  </div>
 </div>
 <div>
-  <a href="/add_products_belong_groups" role="button" class="btn btn-success">Ajouter Nouveau Groupe de Produit</a>
+  <a href="/add_products_belong_groups" role="button" class="btn btn-success">Ajouter/Modifié un Groupe de Produit</a>
 </div>
